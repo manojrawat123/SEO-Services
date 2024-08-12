@@ -11,6 +11,7 @@ const AddService = () => {
   const validationSchema = generateValidationSchema(addServiceArr);
   const initialValues = genrateInitalValues(addServiceArr);
   const [button, setButton] = useState();
+  const formData = new FormData();
 
   return (
     <div>
@@ -41,6 +42,10 @@ const AddService = () => {
                             required={element.required ? true : false}
                             onChange={(e) => {
                               setFieldValue(element.name, e.target.value);
+                              if (element.type == "file"){
+                                const uploadedFile = e.target.files[0];
+                                formData.append('file', uploadedFile);
+                              }
                               if (element.name == 'title') {
                                 setFieldValue('slug', e.target.value.toLowerCase()
                                   .trim()
