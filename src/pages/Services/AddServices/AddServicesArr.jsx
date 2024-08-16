@@ -27,7 +27,7 @@ const addServiceArr = [
         'disabled': true
     },
     {
-        'type': 'tfile',
+        'type': 'file',
         'id': 'image',
         'name': 'image',
         'label': 'Image',
