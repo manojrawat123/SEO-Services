@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Route, Routes, Navigate, useLocation, useNavig
 import HomePage from './pages/Home/HomePage';
 import AddService from './pages/Services/AddServices/AddService';
 import ServiceDetails from './pages/Services/ServiceDetails/ServiceDetails';
+import NavMenu from './component/Navbar/Navbar';
 
 
 
 function App() {
   return (
     <>
+    <NavMenu />
         <Routes>
           <Route path='' Component={HomePage}></Route>
           <Route path='/services' Component={HomePage}></Route>

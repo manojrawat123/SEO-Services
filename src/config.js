@@ -1,1 +1,4 @@
-export const API_BASE_URL = "https://emailmanagement.pythonanywhere.com";
+export const API_BASE_URL = "http://localhost:8000";
+
+
+// export const API_BASE_URL = "https://emailmanagement.pythonanywhere.com";

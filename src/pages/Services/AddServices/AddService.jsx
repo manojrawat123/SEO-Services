@@ -7,6 +7,9 @@ import genrateInitalValues from "../../../component/genrateInitialValues/Initial
 import generateValidationSchema from "../../../component/GenrateValidationSchema/genrateValidationSchema";
 import { API_BASE_URL } from "../../../config";
 import axios from "axios";
+import 'react-quill/dist/quill.snow.css';
+import ReactQuill from 'react-quill';
+
 
 const AddService = () => {
   const validationSchema = generateValidationSchema(addServiceArr);
@@ -75,6 +78,33 @@ const AddService = () => {
                         className="pl-9 w-full py-2 peer px-3 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-600"
                       />
                     </div>
+                    }
+                    if (element.type == "dynamictextarea"){
+                      return <>
+                       <div className={"w-full relative col-span-1 "}>
+                          {/* {element.icon} */}
+                         <ReactQuill 
+                         value={values[element.name]}
+                         onChange={(value)=>{
+                          setFieldValue(element.name, value);
+                         }} 
+                         modules={{
+                          toolbar: {
+                            container: [
+                              [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                              [{ 'font': [] }],
+                              [{ 'align': [] }],
+                              ['bold', 'italic', 'underline', 'strike'],
+                              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                              ['blockquote', 'code-block'],
+                              // ['link', 'image'],
+                              [{ 'color': [] }, { 'background': [] }],
+                              ['clean'], 
+                            ],
+                          }
+                        }}/>
+                        </div>
+                      </>
                     }
                     return (
                       <>

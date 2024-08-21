@@ -21,3 +21,21 @@
     background-color: rgb(179, 179, 179);
   }
   
+
+/* Custom CSS to fix list styles */
+ul, ol {
+  margin: 10;
+  padding-left: 1.5rem; /* Adjust padding as needed */
+}
+
+ul {
+  list-style-type: disc; /* For bullet points */
+}
+
+ol {
+  list-style-type: decimal; /* For numbered lists */
+}
+
+li {
+  margin-bottom: 0.5em; /* Adjust as needed */
+}
