@@ -32,7 +32,10 @@ const HomePage = () => {
                 {" "}
                 {element.title}
               </span><br/>
-              <span>{element.description.substring(0, 70)}...</span>
+             <div 
+             dangerouslySetInnerHTML={{
+                    __html : element?.description?.substring(0, 70) + '...'
+                    }}/>
             </div>
           </>
         );

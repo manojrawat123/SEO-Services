@@ -11,12 +11,14 @@ function App() {
   return (
     <>
     <NavMenu />
+    <div className="mt-20">
         <Routes>
           <Route path='' Component={HomePage}></Route>
           <Route path='/services' Component={HomePage}></Route>
           <Route path='/services/:slug' Component={ServiceDetails}></Route>
           <Route path='/add-services' Component={AddService}></Route>
         </Routes>
+    </div>
     </>
 
   );

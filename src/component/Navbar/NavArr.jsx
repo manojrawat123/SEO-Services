@@ -62,7 +62,7 @@ const navBarArr = [
     },
     {
         id: "4",
-        label: "User Management",
+        label: "About",
         link: "#",
         // option: [
         //     {
@@ -84,7 +84,7 @@ const navBarArr = [
     },
     {
         id: "5",
-        label: "Top Route & Rate Management",
+        label: "Service",
         link: "#",
         // option: [
         //     {
@@ -122,7 +122,7 @@ const navBarArr = [
     
     {
         id: "7",
-        label: "Event",
+        label: "Product",
         // option: [
         //     {
         //         id : "7a",
@@ -147,7 +147,7 @@ const navBarArr = [
     },
     {
         id: "8",
-        label: "Vendor Rate Management",
+        label: "Blog",
         // option: [
         //     {
         //         id: "8a",
